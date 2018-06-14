@@ -1,0 +1,329 @@
+h1 {
+	text-align: center;
+	font-family: 'Share Tech Mono', monospace;
+
+}
+
+.robots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 100px;
+    -webkit-animation: so-excited 2s linear;
+    animation: so-excited 2s linear;
+    -webkit-animation-iteration-count: 2;
+}
+
+@-webkit-keyframes so-excited {
+    0% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    25% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        
+    }
+    50% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+ 
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+
+    }
+
+    
+}
+
+@keyframes so-excited {
+    0% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    25% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        
+    }
+    50% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+ 
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+
+    }
+
+    
+}
+
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #5f93e8;
+}
+
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.eyes {
+	
+}
+
+.head:hover {
+	width: 300px;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex; 
+    margin: 0 auto;
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+    -webkit-animation: left-arm 3s infinite; 
+    animation: left-arm 3s infinite;
+   
+} 
+
+@-webkit-keyframes left-arm{
+    0% {
+         -webkit-transform-origin: top;
+         transform-origin: top;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+    }
+    
+    50%{
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        -webkit-transform: rotate(150deg);
+        transform: rotate(150deg);
+    }
+    100%
+    {
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+    }
+} 
+
+@keyframes left-arm{
+    0% {
+         -webkit-transform-origin: top;
+         transform-origin: top;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+    }
+    
+    50%{
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        -webkit-transform: rotate(150deg);
+        transform: rotate(150deg);
+    }
+    100%
+    {
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+    }
+}
+.right_arm { 
+	margin-left: 10px; 
+} 
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+    background-color: red;
+    z-index: 4;
+} 
+
+.dots, .dots2 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    margin: 20px;
+    z-index: 5;
+    
+}
+
+.dots2 {
+    -webkit-transform: translate(20px, -80px);
+  
+}
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+	margin: 0 auto;
+
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+    z-index: 1;
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.right_leg { 
+	margin-left: 120px; 
+    -webkit-transform: translateY(-120px); 
+    transform: translateY(-120px);
+   
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: white;  
+} 
+
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative; 
+	top: 100px; 
+	left: 40px; 
+    -webkit-animation: blink 1s infinite; 
+    
+} 
+
+@-webkit-keyframes blink {
+    0% {
+        -webkit-transform: rotateX(80deg);
+    }
+    
+    1% {
+        -webkit-transform: rotateX(0deg);
+    } 
+    
+    2% {
+        -webkit-transform: rotateX(0deg);
+    }
+    
+    100% {
+        -webkit-transform: rotateX(0deg);
+    }
+    
+    
+    
+} 
+
+@keyframes blink {
+    from {
+        -webkit-transform: rotateX(80deg);
+        transform: rotateX(80deg);
+    }
+    
+    to {
+        -webkit-transform: rotateX(25deg);
+        transform: rotateX(25deg);
+    }
+}
+.right_eye { 
+	position: relative; 
+	top: 80px; 
+	left: 120px; 
+}
+
+
+.hat-top {
+    background-color: black;
+    width: 150px;
+    height: 60px;
+    position: relative;
+    left: -150px;
+    border-bottom: 5px solid #ff0000;
+    z-index: 5;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    
+}
+
+.hat-base {
+    background-color: black;
+    width: 360px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    left: -395px;
+    top: 45px;
+    z-index: 4;
+    
+}
+
+.hat {
+    -webkit-transform: translate(-70px, -40px);
+    -webkit-animation: hat 2s linear infinite;
+
+}
+
+@-webkit-keyframes hat {
+    0% {
+        -webkit-transform: rotate(5deg)
+                            translate(-70px, -40px);
+        
+    }
+    
+    50% {
+        -webkit-transform: rotate(-3deg)
+                            translate(-70px, -40px);
+        
+    }
+      100% {
+        -webkit-transform: rotate(5deg)
+                            translate(-70px, -40px);
+        
+    }
+    
+}
+
+
+
+
+
